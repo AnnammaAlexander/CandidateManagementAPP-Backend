@@ -18,7 +18,7 @@ A RESTful backend API for a Candidate Management System built with Node.js, Expr
 - **Database**: MongoDB with Mongoose
 - **Authentication**: JWT (JSON Web Tokens)
 - **Security**: bcryptjs
-- **Other**: dotenv, cors, morgan
+- **Other**: dotenv, cors
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ A RESTful backend API for a Candidate Management System built with Node.js, Expr
 3. Create a `.env` file in the root directory (one is already provided with defaults):
    ```env
    PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/candidate-db
+   MONGODB_URI=mongodb_url
    JWT_SECRET=supersecretkey123
    JWT_EXPIRE=30d
    NODE_ENV=development
