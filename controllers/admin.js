@@ -2,9 +2,7 @@ import User from '../models/User.js';
 import asyncHandler from '../middlewares/asyncHandler.js';
 import sendResponse from '../utils/response.js';
 
-// @desc    Get all candidates
-// @route   GET /admin/candidates
-// @access  Private/Admin
+// Get all candidates
 export const getCandidates = asyncHandler(async (req, res, next) => {
     // Pagination
     const page = parseInt(req.query.page, 10) || 1;
