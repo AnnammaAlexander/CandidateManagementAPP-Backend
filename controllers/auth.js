@@ -5,7 +5,6 @@ import { generateToken, generateRefreshToken } from '../utils/auth.js';
 import jwt from 'jsonwebtoken';
 
 // Register candidate
-
 export const register = asyncHandler(async (req, res, next) => {
     const { fullName, email, password, role } = req.body;
 
@@ -91,7 +90,6 @@ export const login = asyncHandler(async (req, res, next) => {
 });
 
 // Log user out 
-
 export const logout = asyncHandler(async (req, res, next) => {
     // Clear refresh token in DB
     if (req.user) {
@@ -103,9 +101,7 @@ export const logout = asyncHandler(async (req, res, next) => {
     sendResponse(res, 200, true, 'User logged out successfully');
 });
 
-// @desc    Refresh Access Token
-// @route   POST /auth/refresh
-// @access  Public
+// Refresh Access Token
 export const refreshToken = asyncHandler(async (req, res, next) => {
     const { refreshToken } = req.body;
 
